@@ -53,3 +53,7 @@ ul {
 .move-selected {
   font-weight: bold;
 }
+
+.history-plays {
+  font-size: 12px;
+}

@@ -90,9 +90,31 @@ class Game extends React.Component {
 
     const moves = history.map((step, move) => {
       const desc = move ? 'Go to move #' + move : 'Go to game start';
+
+      for (let index = 0; index < step.squares.length; index++) {
+        const element = step.squares[index];
+        if (element !== null) {
+          let colunm = index;
+          if (index === 0 || index === 1 || index === 2) {
+            console.log('linha 1');
+            colunm++;
+            console.log(1, colunm);
+          } else if (index === 3 || index === 4 || index === 5) {
+            console.log('linha 2');
+            colunm++;
+            console.log(2, colunm);
+          } else {
+            console.log('linha 3');
+            colunm++;
+            console.log(3, colunm);
+          }
+        }
+      }
+
       return (
         <li key={move}>
           <button onClick={() => this.jumpTo(move)}>{desc}</button>
+          <p className="history-plays">Histórico de Jogadas: </p>
         </li>
       );
     });
