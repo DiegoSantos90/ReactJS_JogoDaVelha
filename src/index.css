@@ -50,10 +50,15 @@ ul {
   margin-left: 20px;
 }
 
-.move-selected {
+.history-plays {
+  font-size: 12px;
+}
+
+.move-list-item-selected {
+  float: left;
   font-weight: bold;
 }
 
-.history-plays {
-  font-size: 12px;
+.square.highlight {
+  background-color: #00a000;
 }
